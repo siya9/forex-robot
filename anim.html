@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="animation" content="moving from left to right"/>
+	<title>javascript animation</title>	
+	<style rel="stylesheet" type="text/css">
+		a
+		{
+			color: red;
+			background-image: url('images/hot.PNG');
+			width: 135px;
+			height: 124px;
+			font-size: 68px;
+		}
+
+		a:hover
+		{
+			color: rgb(0,255,255);
+			background-image: url('images/cold.PNG');
+			width: 135px;
+			height: 124px;
+			position: bottom-center;
+		}
+	</style>
+	<script  type='text/javascript'>
+		<!--
+		var imgObj = null;
+		function init()
+		{
+			imgObj = document.getElementById('myImage');
+			imgObj.style.position = 'relative';
+			imgObj.style.left = '0px';
+		}
+
+		function moveRight()
+		{
+
+			if(imgObj.style.left == '1000px')
+			{
+				stop();
+				moveRight();
+			}
+			else
+			{
+				imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';
+				animate = setTimeout(moveRight, 33); //call moveRight in 20 msec
+			}
+
+
+			
+		}
+		function stop()
+		{
+			clearTimeout(animate);
+			imgObj.style.left = '0px';
+		}
+
+		window.onload = init;
+		-->
+	</script>
+</head>
+
+<body>
+
+<form>
+<img id="myImage" src="images/hot.PNG" alt="hot picture"/>
+<p>Click below button to move image to the right</p>
+<input type="button" value="Start" onclick="moveRight();" /><br/>
+<input type="button" value="Stop" onclick="stop();"/>
+</form>
+
+<a href="javascript: alert('money')">press</a><hr/><hr/>
+
+<img src="images/fec.PNG" alt="fec" style="display: block; margin: 0px auto;" />.
+
+
+
+</body>
+
+</html>
